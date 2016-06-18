@@ -1,0 +1,23 @@
+<button class="secondary" @click="close()">Back</button>
+<div class="row">
+  <div class="card">
+    <div class="card-content">
+      <img v-bind:src="message.sender.profile_picture" class="img-profile pull-left">
+      <b>{{message.sender.name}}</b><br>
+      <b>{{message.title}}</b><br>
+      <small>Pada {{message.time}}</small><br>
+      {{message.content}}
+    </div>
+  </div>
+</div>
+<div class="row" v-for="reply in replies">
+  <div class="card">
+    <div class="card-content">
+      <img v-bind:src="reply.sender.profile_picture" class="img-profile pull-left">
+      <b>{{reply.sender.name}}</b><br>
+      <small>Pada {{reply.time}}</small><br>
+      {{reply.content}}
+    </div>
+  </div>
+</div>
+<button class="secondary" @click="close()">Back</button>

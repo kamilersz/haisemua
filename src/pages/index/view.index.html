@@ -1,0 +1,18 @@
+<a v-page-link="'map'">Buka Map</a>
+<h1>Daftar Pesan</h1>
+<a v-page-link="'new_message'">Tambah Pesan</a>
+<a v-on:click="getData()">Refresh Data</a>
+<div>
+Selamat datang {{nama}}
+  <div v-for="item in items" class="row">
+    <div class="card" v-on:click="showDetail(item.id)">
+      <div class="card-content">
+        <img v-bind:src="item.sender.profile_picture" class="img-profile pull-left">
+        <b>{{item.sender.name}}</b><br>
+        <b>{{item.title}}</b><br>
+        <small>Pada {{item.time}}</small><br>
+        {{item.content}}
+      </div>
+    </div>
+  </div>
+</div>

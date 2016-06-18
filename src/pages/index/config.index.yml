@@ -1,0 +1,5 @@
+label: 'Index'
+icon: 'dashboard'
+layout: 'master'
+navigation:
+  group: 'main'

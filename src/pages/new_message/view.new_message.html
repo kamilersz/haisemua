@@ -1,0 +1,17 @@
+<div class="list inner-delimiter bordered">
+  <div class="list-header">Pesan Baru</div>
+  <div class="item stacked-label">
+    <div class="item-content">
+      <input id="title" v-model="title" required>
+      <label for="title">Judul</label>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-content">
+      <textarea v-model="content" required placeholder="pesan"></textarea>
+    </div>
+  </div>
+  <br>
+  <button class="primary" @click="save()">Kirim</button>
+</div>
+<button class="secondary" v-page-link="'index'">Kembali</button>

@@ -1,0 +1,15 @@
+<map
+  :center.sync="center"
+  :zoom.sync="zoom"
+>
+  <marker 
+    v-for="m in markers"
+    :position.sync="m.position"
+    :clickable.sync="m.clickable"
+    :draggable.sync="m.draggable"
+    :animation.sync="m.animation"
+    :icon.sync="m.icon"
+    @g-click="clickMarker(m)"
+  >
+  </marker>
+</map>
